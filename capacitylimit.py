@@ -1,3 +1,9 @@
+"""
+Copyright (C) 2020 Intel Corporation
+
+SPDX-License-Identifier: BSD-3-Clause
+"""
+
 import json
 import os
 from collections import OrderedDict
