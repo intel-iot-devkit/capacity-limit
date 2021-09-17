@@ -172,7 +172,7 @@ class LineCrossing(object):
             person = person.transpose((2, 0, 1))  # Change data layout from HWC to CHW
             person = person.reshape((self.ov_n_reid, self.ov_c_reid, self.ov_h_reid, self.ov_w_reid))
 
-            self.net_reid.start_async(request_id=0, inputs={self.ov_input_blob: person})
+            self.net_reid.start_async(request_id=0, inputs={self.ov_input_blob_reid: person})
 
             if self.net_reid.requests[0].wait(-1) == 0:
                 res = self.net_reid.requests[0].outputs[self.out_blob_reid]
